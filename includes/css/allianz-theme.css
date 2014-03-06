@@ -26,14 +26,10 @@ body {
 	width:100%;
 }
 
-header[role="banner"], 
-section[role="main"] { 
-	width:100%;
-}
-
 header[role="banner"],
-section[role="main"] { 
-	width:1024px; 
+.page { 
+	width:100%; 
+	max-width:1024px; 
 	margin:0 auto;
 }
 
@@ -53,14 +49,16 @@ header[role="banner"] {
 }
 
 header[role="banner"] nav[role="navigation"] {
-	width:1024px;
+	width:100%;
+	max-width:1024px;
 	position:fixed;
 	z-index:1000;
 }
 
 header[role="banner"] nav[role="navigation"] ul {
 	display:table;
-	width:1024px;
+	width:100%;
+	max-width:1024px;
 }
 
 header[role="banner"] nav[role="navigation"] ul li { 
@@ -69,52 +67,65 @@ header[role="banner"] nav[role="navigation"] ul li {
 	text-align:center;
 	font-family: 'AvenirNextCondensed';
 	font-size:19px;
-	line-height:92px;
+	line-height:46px;
 	text-transform:uppercase;
 }
 
 header[role="banner"] nav[role="navigation"] ul li:nth-child(2) { 
-	min-width:140px;
+	width:16%;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:nth-child(3) { 
+	width:28%;
 }
 
 header[role="banner"] nav[role="navigation"] ul li:nth-child(4) { 
-	min-width:100px;
+	width:12%;
 }
 
 header[role="banner"] nav[role="navigation"] ul li:nth-child(5) { 
-	min-width:60px;
+	width:7%;
 }
 
 header[role="banner"] nav[role="navigation"] ul li:nth-child(6) { 
-	min-width:80px;
+	width:9%;
 }
 
 header[role="banner"] nav[role="navigation"] ul li:first-child { 
 	font-size:30px;
-	min-width:120px;
+	width:15%;
 }
 
-header[role="banner"] nav[role="navigation"] ul li a { 
+header[role="banner"] nav[role="navigation"] ul li p { 
 	display:inline-block;
+	height:46px;
+	padding:23px 0;
 	background:#fff url(../../images/border.gif) right top no-repeat;
 	width:100%;
 	color:#084f8f;
+	cursor:pointer;
 }
 
-header[role="banner"] nav[role="navigation"] ul li.active a { 
-	padding-bottom:12px;
+header[role="banner"] nav[role="navigation"] ul li.active p { 
+	border-bottom:12px solid #fff;
 	background:#fff url(../../images/border.gif) right top repeat-y;
+}
+
+header[role="banner"] nav[role="navigation"] ul li p span { 
+	display:inline-block;
+	line-height:23px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:first-child p span { 
+	line-height:30px;
 }
 
 header[role="banner"] nav[role="navigation"] ul li:last-child { 
 	border:none;
 	padding:0;
 	margin:0;
-}
-
-header[role="banner"] nav[role="navigation"] ul li:last-child { 
 	background:url(../../images/allianz.gif) left top no-repeat;
-	width:133px;
+	width:/*133px;*/13%;
 	height:59px;
 }
 
@@ -131,19 +142,20 @@ CONTENT
 -----------------------------------*/
 .page {
 	background:#f0f0f0;
-	width:1024px;
-	margin:0 auto;
+	width:100%;
+	max-width:1024px;
+	min-height:768px;
 	right:0;
+	overflow:hidden;
 }
 
 .page section {
 	font-family: 'AvenirNextCondensed';
-	padding-top:92px;
+	min-height:678px;
 }
 
 h1, h2,
-#home .bloc a,
-#visite a span {
+#home .bloc {
 	font-size:60px;
 	line-height:72px;
 	text-transform:uppercase;
@@ -165,9 +177,11 @@ h2 {
 /* HOME */
 #home {
 	position:relative;
-	background:url(../../images/home.jpg) left top no-repeat;
-	width:1024px;
+	width:100%;
+	max-width:1024px;
 	height:768px;
+	background:url(../../images/home.jpg) right top no-repeat;
+	background-size:cover;
 	padding-top:0;
 }
 
@@ -183,20 +197,21 @@ h2 {
 
 #home .bloc {
 	width:390px;
-	height:215px;
+	height:240px;
 	padding:80px 40px 0 40px;
-	top:361px;
+	top:47%;
 	left:0;
+	cursor:pointer;
 }
 
-#home .bloc a span {
+#home .bloc span {
 	display:block;
 	font-size:34px;
 	line-height:45px;
 	color:#000;
 }
 
-#home .bloc a span:first-child {
+#home .bloc span:first-child {
 	font-size:103px;
 	line-height:95px;
 	color:#084f8f;
@@ -204,12 +219,7 @@ h2 {
 
 
 /* PAGE */
-.pageContent div {
-	min-height:384px;
-}
-
-.pageContent h1,
-#visite a span {
+.pageContent h1 {
 	margin-bottom:10px;
 }
 
@@ -220,26 +230,89 @@ h2 {
 	margin-bottom:10px;
 }
 
-.pageContent p,
-#visite a span + span {
+.pageContent p {
 	font-size:18px;
 	line-height:20px;
-	height:140px;
-	overflow:hidden;
+}
+
+.pageContent p sup {
+	font-size:10px;
+	line-height:12px;
 }
 
 
-/* CONTEXTE */
-#contexte div {
-	padding:55px 642px 0 65px;
-	background:url(../../images/immeuble-exterieur.jpg) 447px 55px no-repeat;
-	min-height:384px;
+/* CONTEXTE + IMMEUBLE */
+#contexte article > div,
+#immeuble article > div {
+	padding:6% 0;
 }
 
-#contexte div + div {
-	padding:40px 65px 0 642px;
-	background:#fff url(../../images/immeuble-exterieur.jpg) 65px 40px no-repeat;
-	min-height:inherit;
+#contexte div > div,
+#immeuble div > div {
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-color:inherit;
+}
+
+#contexte div:nth-child(2),
+#immeuble div:nth-child(2) {
+	background-color:#fff;
+	padding-top:4%;
+}
+
+#contexte div div:nth-child(2),
+#immeuble div div:nth-child(2) {
+	background-color:inherit;
+}
+
+#contexte div:nth-child(1) .left,
+#contexte div:nth-child(2) .right,
+#immeuble div:nth-child(1) .right,
+#immeuble div:nth-child(2) .left {
+	padding:0 6%;
+}
+
+#contexte div:nth-child(1) .right,
+#immeuble div:nth-child(2) .right {
+	margin-right:6%;
+}
+
+#contexte div:nth-child(2) .left,
+#immeuble div:nth-child(1) .left {
+	margin-left:6%;
+}
+
+#contexte div:nth-child(1) .left,
+#contexte div:nth-child(2) .right,
+#immeuble div:nth-child(1) .right,
+#immeuble div:nth-child(2) .left {
+	width:100%;
+	max-width:31%;
+	word-wrap:break-word;
+}
+
+#contexte div:nth-child(1) .right,
+#contexte div:nth-child(2) .left,
+#immeuble div:nth-child(1) .left,
+#immeuble div:nth-child(2) .right {
+	background-image:url(../../images/immeuble.jpg);
+	width:100%;
+	max-width:51%;
+	height:384px;
+	padding-top:0;
+}
+
+#contexte div:nth-child(2) .left {
+	background-image:url(../../images/immeuble-cour.jpg);
+}
+
+#immeuble div:nth-child(1) .left {
+	background-image:url(../../images/immeuble-exterieur-bis.jpg);
+}
+
+#immeuble div:nth-child(2) .right {
+	background-image:url(../../images/immeuble-exterieur-bis.jpg);
 }
 
 
@@ -250,15 +323,17 @@ h2 {
 }
 
 #localisation .map {
-	background:url(../../images/googleMap.gif) left top no-repeat;
-	width:1024px;
-	height:768px;
+	background:url(../../images/googleMap.gif) center top no-repeat;
+	background-size:cover;
+	width:100%;
+	max-width:1024px;
+	height:678px;
 }
 
 #localisation .mapInfo {
 	position:absolute;
 	right:-277px;
-	top:130px;
+	top:0;
 	z-index:900;
 	width:350px;
 	height:678px;
@@ -267,7 +342,7 @@ h2 {
 #localisation .mapInfo div {
 	float:right;
 	width:277px;
-	height:768px;
+	height:678px;
 }
 
 #localisation .mapInfo .button {
@@ -276,8 +351,9 @@ h2 {
 	width:73px;
 	height:79px;
 	position:absolute;
-	top:102px;
+	top:142px;
 	left:0;
+	cursor:pointer;
 }
 
 #localisation .mapInfo .buttonClose {
@@ -288,9 +364,10 @@ h2 {
 #localisation .mapInfo ul {
 	float:left;
 	width:203px;
-	height:406px;
+	height:407px;
 	padding:25px 37px;
 	background:#fff;
+	overflow-y:auto;
 }
 
 #localisation .mapInfo ul li {
@@ -302,6 +379,7 @@ h2 {
 	width:233px;
 	height:168px;
 	padding:33px 22px 20px 22px;
+	overflow:inherit;
 }
 
 #localisation .mapInfo ul:first-child li {
@@ -357,58 +435,53 @@ h2 {
 	background:url(../../images/picto_cache.png) center top no-repeat;
 }
 
-#localisation .mapInfo ul:first-child li.off p:first-child {
+#localisation .mapInfo ul:first-child li.off p {
 	color:#b4b4b4;
 }
 
 
-/* IMMEUBLE */
-#immeuble div {
-	padding:55px 65px 0 642px;
-	background:url(../../images/immeuble-exterieur-bis.jpg) 65px 55px no-repeat;
-	min-height:384px;
-}
-
-#immeuble div + div {
-	padding:40px 642px 0 65px;
-	background:#fff url(../../images/immeuble-exterieur-bis.jpg) 447px 40px no-repeat;
-	min-height:inherit;
-}
-
-
 /* VISITE */
-#visite a {
-	display:block;
-	width:312px;
-	height:289px;
-	min-height:inherit;
-	padding:95px 100px 0 612px;
-	background:url(../../images/immeuble-exterieur.jpg) left top no-repeat;
+#visite article {
+	width:100%;
+	max-width:1024px;
 	cursor:pointer;
 }
 
-#visite a + a {
-	padding:95px 612px 0 100px;
-	background:url(../../images/immeuble-interieur.jpg) right top no-repeat;
+#visite article:nth-child(1) .right,
+#visite article:nth-child(2) .left {
+	width:35%;
+	min-height:244px;
+	padding:9% 7% 0 7%;
+	word-wrap:break-word;
 }
 
-#visite a span {
-	display:block;
+#visite article:nth-child(1) .left,
+#visite article:nth-child(2) .right {
+	background:url(../../images/immeuble-exterieur.jpg) right top no-repeat;
+	background-size:cover;
+	width:100%;
+	width:50%;
+	height:339px;
 }
 
-#visite a span + span {
-	color:#666;
-	text-transform:none;
-	margin:0;
+#visite article:nth-child(2) .right {
+	background:url(../../images/immeuble-interieur.jpg) left top no-repeat;
+	background-size:cover;
+}
+
+#visite article p {
+	height:120px;
+	overflow:hidden;
 }
 
 
 /* GALERIE */
 .galleryImg {
 	position:relative;
-	background:url() left top no-repeat;
-	width:1024px;
+	width:100%;
+	max-width:1024px;
 	height:768px;
+	background-size:contain;
 }
 
 .galleryImg .bloc {
@@ -439,11 +512,11 @@ h2 {
 }
 
 #galleryExt {
-	background:url(../../images/home.jpg) left top no-repeat;
+	background:url(../../images/home.jpg) center top no-repeat;
 }
 
 #galleryInt1 {
-	background:url(../../images/gallery1.jpg) left top no-repeat;
+	background:url(../../images/gallery1.jpg) center top no-repeat;
 }
 
 #galleryInt1 .bloc span {
@@ -451,7 +524,7 @@ h2 {
 }
 
 #galleryInt2 {
-	background:url(../../images/gallery2.jpg) left top no-repeat;
+	background:url(../../images/gallery2.jpg) center top no-repeat;
 }
 
 #galleryInt2 .bloc span {

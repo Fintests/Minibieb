@@ -15,4 +15,4 @@ var ContexteView = function() {
 
 }
 
-ContexteView.template = Handlebars.compile($("#header-tpl").html()+$("#contexte-tpl").html());
+ContexteView.template = Handlebars.compile($("#contexte-tpl").html());

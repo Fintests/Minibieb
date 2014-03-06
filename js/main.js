@@ -1,11 +1,8 @@
 var app = {
     initialize: function() {
         var self = this;
-        this.detailsURL = /#([^&]+)(&|$)/;
         this.registerEvents();
-        this.store = new MemoryStore(function() {
-            self.route();
-        });
+        self.route();
 
     },
 
@@ -76,7 +73,7 @@ var app = {
         if (!hash) {
             this.homePage = new HomeView(this.store).render();
             this.slidePage(this.homePage);
-            $('.bloc').biseau({tl:0,tr:0,br:40,bl:0});
+            // $('body').html( new HomeView(this.store).render().el);
             return;
         }
         else
@@ -85,71 +82,14 @@ var app = {
             {
                 this.homePage = new ContexteView().render();
                 this.slidePage(this.homePage);
+                // $('body').html( new ContexteView().render().el);
                 $('.li-contexte').addClass('active');
             }
-            else if(hash=="#localisation")
-            {
-                this.homePage = new LocalisationView().render();
-                this.slidePage(this.homePage);
-
-                $('.li-localisation').addClass('active');
-
-                $('.buttonOpen').click(function() {
-                    $(this).css('display','none');
-                    $('.buttonClose').css({'display':'block','top':'142px'});
-                    $('.mapInfo').css({'right':'0','top':'90px'});
-                });
-                
-                $('.buttonClose').click(function() {
-                    $(this).css('display','none');
-                    $('.buttonOpen').css({'display':'block','top':'102px'});
-                    $('.mapInfo').css({'right':'-277px','top':'130px'});
-                });
-            }
-            else if(hash=="#immeuble")
-            {
-                this.homePage = new ImmeubleView().render();
-                this.slidePage(this.homePage);
-                $('.li-immeuble').addClass('active');
-            }
-            else if(hash=="#visite")
-            {
-                this.homePage = new VisiteView().render();
-                this.slidePage(this.homePage);
-                $('.li-visite').addClass('active');
-            }
-            else if(hash=="#galleryExt")
-            {
-                this.homePage = new GalleryExtView().render();
-                this.slidePage(this.homePage);
-                $('.li-visite').addClass('active');
-            }
-            else if(hash=="#galleryInt1")
-            {
-                this.homePage = new GalleryInt1View().render();
-                this.slidePage(this.homePage);
-                $('.li-visite').addClass('active');
-            }
-            else if(hash=="#galleryInt2")
-            {
-                this.homePage = new GalleryInt2View().render();
-                this.slidePage(this.homePage);
-                $('.li-visite').addClass('active');
-            }
-            else if(hash=="#contact")
-            {
-                this.homePage = new ContactView().render();
-                this.slidePage(this.homePage);
-                $('.li-contact').addClass('active');
-            }
-            // else if(hash=="#allianz")
-            // {
-            //     navigator.app.loadUrl('https://m.allianz.fr/accueil/index.html', { openExternal:true } ); 
-            // }
             else
             {
                 this.homePage = new HomeView(this.store).render();
                 this.slidePage(this.homePage);
+                // $('body').html(new HomeView(this.store).render().el);
                 $('.bloc').biseau({tl:0,tr:0,br:40,bl:0});
             }
         }
