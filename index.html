@@ -1,6 +1,56 @@
 <html>
-	<head></head>
-	<body>
-		<p>pwet</p>
-	</body>
+
+<head>
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+<title>PhoneGapSwipe</title>
+
+</head>
+<body role="document">
+
+	<!-- Page d'accueil -->
+	<script id="home-tpl" type="text/x-handlebars-template">
+			<section id="home" onclick="window.location.hash='#contexte'" >
+				<span></span>
+	            <div class="bloc">
+	                <a href="#contexte" >
+						<span>38, Opéra</span> 
+						<span>Présentation des plateaux</span>
+					</a>
+	            </div>
+	        </section>
+	</script>
+
+	<!-- Page contexte -->
+	<script id="contexte-tpl" type="text/x-handlebars-template" >
+		<section id="contexte" class="pageContent scroll">
+	    	<div>
+	            <h1>Le contexte locatif</h1>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+	        </div>
+	        
+	        <div>
+	            <h2>Stacking plan</h2>
+	            <p>Lip quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+	        </div>
+	    </section>
+	</script>
+
+
+	
+
+<!-- <script src="phonegap.js"></script> -->
+<!-- Template -->
+<script src="lib/handlebars.js"></script>
+
+<!-- Vues -->
+<script src="js/HomeView.js"></script>
+<script src="js/ContexteView.js"></script>
+
+<script src="js/main.js"></script>
+
+	
+
+</body>
 </html>

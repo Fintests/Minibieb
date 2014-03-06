@@ -1,0 +1,565 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html { 
+	font-family:Tahoma, Geneva, sans-serif;
+	width:100%;
+	color:#666;
+}
+
+@font-face {
+    font-family: 'AvenirNextCondensed';
+    src: url('../fonts/AvenirNextCondensed.eot');
+    src: url('../fonts/AvenirNextCondensed.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCondensed.woff') format('woff'),
+         url('../fonts/AvenirNextCondensed.ttf') format('truetype'),
+         url('../fonts/AvenirNextCondensed.svg#AvenirNextCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+	background:#fff; 
+	font-size:14px; 
+	line-height:16px; 
+	width:100%;
+}
+
+header[role="banner"], 
+section[role="main"] { 
+	width:100%;
+}
+
+header[role="banner"],
+section[role="main"] { 
+	width:1024px; 
+	margin:0 auto;
+}
+
+h1, 
+h2, 
+h3 { 
+	font-weight:normal;
+}
+
+
+
+/*---------------------------------
+HEADER
+-----------------------------------*/
+header[role="banner"] {
+	position:relative;
+}
+
+header[role="banner"] nav[role="navigation"] {
+	width:1024px;
+	position:fixed;
+	z-index:1000;
+}
+
+header[role="banner"] nav[role="navigation"] ul {
+	display:table;
+	width:1024px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li { 
+	display:table-cell;
+	vertical-align:top;
+	text-align:center;
+	font-family: 'AvenirNextCondensed';
+	font-size:19px;
+	line-height:92px;
+	text-transform:uppercase;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:nth-child(2) { 
+	min-width:140px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:nth-child(4) { 
+	min-width:100px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:nth-child(5) { 
+	min-width:60px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:nth-child(6) { 
+	min-width:80px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:first-child { 
+	font-size:30px;
+	min-width:120px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li a { 
+	display:inline-block;
+	background:#fff url(../../images/border.gif) right top no-repeat;
+	width:100%;
+	color:#084f8f;
+}
+
+header[role="banner"] nav[role="navigation"] ul li.active a { 
+	padding-bottom:12px;
+	background:#fff url(../../images/border.gif) right top repeat-y;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:last-child { 
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:last-child { 
+	background:url(../../images/allianz.gif) left top no-repeat;
+	width:133px;
+	height:59px;
+}
+
+header[role="banner"] nav[role="navigation"] ul li:last-child span,
+.galleryImg .close span { 
+	display:block;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+
+
+/*---------------------------------
+CONTENT
+-----------------------------------*/
+.page {
+	background:#f0f0f0;
+	width:1024px;
+	margin:0 auto;
+	right:0;
+}
+
+.page section {
+	font-family: 'AvenirNextCondensed';
+	padding-top:92px;
+}
+
+h1, h2,
+#home .bloc a,
+#visite a span {
+	font-size:60px;
+	line-height:72px;
+	text-transform:uppercase;
+	color:#000;
+}
+
+h2 {
+	font-size:30px;
+	line-height:36px;
+}
+
+.bloc {
+	background:#fff;
+	position:absolute;
+	z-index:200;
+}
+
+
+/* HOME */
+#home {
+	position:relative;
+	background:url(../../images/home.jpg) left top no-repeat;
+	width:1024px;
+	height:768px;
+	padding-top:0;
+}
+
+#home > span {
+	display:block;
+	background:url(../../images/allianz.gif) left top no-repeat;
+	width:133px;
+	height:59px;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+#home .bloc {
+	width:390px;
+	height:215px;
+	padding:80px 40px 0 40px;
+	top:361px;
+	left:0;
+}
+
+#home .bloc a span {
+	display:block;
+	font-size:34px;
+	line-height:45px;
+	color:#000;
+}
+
+#home .bloc a span:first-child {
+	font-size:103px;
+	line-height:95px;
+	color:#084f8f;
+}
+
+
+/* PAGE */
+.pageContent div {
+	min-height:384px;
+}
+
+.pageContent h1,
+#visite a span {
+	margin-bottom:10px;
+}
+
+.pageContent h2 {
+	font-size:30px;
+	line-height:36px;
+	color:#000;
+	margin-bottom:10px;
+}
+
+.pageContent p,
+#visite a span + span {
+	font-size:18px;
+	line-height:20px;
+	height:140px;
+	overflow:hidden;
+}
+
+
+/* CONTEXTE */
+#contexte div {
+	padding:55px 642px 0 65px;
+	background:url(../../images/immeuble-exterieur.jpg) 447px 55px no-repeat;
+	min-height:384px;
+}
+
+#contexte div + div {
+	padding:40px 65px 0 642px;
+	background:#fff url(../../images/immeuble-exterieur.jpg) 65px 40px no-repeat;
+	min-height:inherit;
+}
+
+
+/* LOCALISATION */
+#localisation {
+	position:relative;
+	overflow:hidden;
+}
+
+#localisation .map {
+	background:url(../../images/googleMap.gif) left top no-repeat;
+	width:1024px;
+	height:768px;
+}
+
+#localisation .mapInfo {
+	position:absolute;
+	right:-277px;
+	top:130px;
+	z-index:900;
+	width:350px;
+	height:678px;
+}
+
+#localisation .mapInfo div {
+	float:right;
+	width:277px;
+	height:768px;
+}
+
+#localisation .mapInfo .button {
+	display:block;
+	background:url(../../images/closeMap.gif) left top no-repeat;
+	width:73px;
+	height:79px;
+	position:absolute;
+	top:102px;
+	left:0;
+}
+
+#localisation .mapInfo .buttonClose {
+	background:url(../../images/openMap.gif) left top no-repeat;
+	display:none;
+}
+
+#localisation .mapInfo ul {
+	float:left;
+	width:203px;
+	height:406px;
+	padding:25px 37px;
+	background:#fff;
+}
+
+#localisation .mapInfo ul li {
+	margin-bottom:15px;
+}
+
+#localisation .mapInfo ul:first-child {
+	background:#f0f0f0;
+	width:233px;
+	height:168px;
+	padding:33px 22px 20px 22px;
+}
+
+#localisation .mapInfo ul:first-child li {
+	float:left;
+	width:47px;
+	height:30px;
+	padding:55px 15px 0 15px;
+	margin-bottom:10px;
+	text-align:center;
+}
+
+#localisation p {
+	font-size:1.125em;
+	line-height:1.25em;
+	color:#000;
+	text-transform:uppercase;
+}
+
+#localisation ul li p:first-child {
+	color:#084f8f;
+	text-transform:none;
+}
+
+#localisation .mapInfo ul:first-child li p:first-child {
+	color:#666;
+}
+
+#localisation .mapInfo ul:first-child li:nth-child(1) {
+	background:url(../../images/picto_parkings.png) center top no-repeat;
+}
+
+#localisation .mapInfo ul:first-child li:nth-child(2) {
+	background:url(../../images/picto_metros.png) center top no-repeat;
+}
+
+#localisation .mapInfo ul:first-child li:nth-child(3) {
+	background:url(../../images/picto_velib.png) center top no-repeat;
+}
+
+#localisation .mapInfo ul:first-child li:nth-child(4) {
+	background:url(../../images/picto_autolib.png) center top no-repeat;
+}
+
+#localisation .mapInfo ul:first-child li:nth-child(5) {
+	background:url(../../images/picto_gares.png) center top no-repeat;
+}
+
+#localisation .mapInfo ul:first-child li:nth-child(6) {
+	background:url(../../images/picto_bus.png) center top no-repeat;
+}
+
+#localisation .mapInfo ul:first-child li.off {
+	background:url(../../images/picto_cache.png) center top no-repeat;
+}
+
+#localisation .mapInfo ul:first-child li.off p:first-child {
+	color:#b4b4b4;
+}
+
+
+/* IMMEUBLE */
+#immeuble div {
+	padding:55px 65px 0 642px;
+	background:url(../../images/immeuble-exterieur-bis.jpg) 65px 55px no-repeat;
+	min-height:384px;
+}
+
+#immeuble div + div {
+	padding:40px 642px 0 65px;
+	background:#fff url(../../images/immeuble-exterieur-bis.jpg) 447px 40px no-repeat;
+	min-height:inherit;
+}
+
+
+/* VISITE */
+#visite a {
+	display:block;
+	width:312px;
+	height:289px;
+	min-height:inherit;
+	padding:95px 100px 0 612px;
+	background:url(../../images/immeuble-exterieur.jpg) left top no-repeat;
+	cursor:pointer;
+}
+
+#visite a + a {
+	padding:95px 612px 0 100px;
+	background:url(../../images/immeuble-interieur.jpg) right top no-repeat;
+}
+
+#visite a span {
+	display:block;
+}
+
+#visite a span + span {
+	color:#666;
+	text-transform:none;
+	margin:0;
+}
+
+
+/* GALERIE */
+.galleryImg {
+	position:relative;
+	background:url() left top no-repeat;
+	width:1024px;
+	height:768px;
+}
+
+.galleryImg .bloc {
+	width:390px;
+	height:215px;
+	padding:32px 40px 0 20px;
+	top:402px;
+	left:0;
+}
+
+.galleryImg .close {
+	display:block;
+	background:url(../../images/close.gif) left top no-repeat;
+	width:73px;
+	height:79px;
+	position:absolute;
+	top:125px;
+	right:0;
+}
+
+.galleryImg .bloc span {
+	display:block;
+	width:130px;
+	height:95px;
+	position:absolute;
+	top:-15px;
+	right:-25px;
+}
+
+#galleryExt {
+	background:url(../../images/home.jpg) left top no-repeat;
+}
+
+#galleryInt1 {
+	background:url(../../images/gallery1.jpg) left top no-repeat;
+}
+
+#galleryInt1 .bloc span {
+	background:url(../../images/plan1.jpg) left top no-repeat;
+}
+
+#galleryInt2 {
+	background:url(../../images/gallery2.jpg) left top no-repeat;
+}
+
+#galleryInt2 .bloc span {
+	background:url(../../images/plan2.jpg) left top no-repeat;
+}
+
+.galleryImg .bloc p {
+	font-size:18px;
+	line-height:20px;
+	width:275px;
+}
+
+.galleryImg .bloc p + p {
+	font-size:39px;
+	line-height:42px;
+	text-transform:uppercase;
+	color:#000;
+	margin:10px 0 18px 0;
+}
+
+.galleryImg .bloc a {
+	display:inline-block;
+	border-radius:15px;
+	background:#f0f0f0;
+	font-size:18px;
+	line-height:40px;
+	text-transform:uppercase;
+	color:#666;
+	height:40px;
+	padding:0 19px;
+	margin-right:6px;
+}
+
+.galleryImg .bloc a.active {
+	background:#003680;
+	color:#fff;
+}
+
+/* CONTACT */
+#contact .left {
+	width:312px;
+	padding:50px 100px;
+}
+
+#contact h2 {
+	font-size:20px;
+	line-height:74px;
+}
+
+#contact p,
+#contact label {
+	font-size:18px;
+	line-height:20px;
+}
+
+#contact p {
+	margin-top:12px;
+}
+
+#contact p span {
+	color:#084f8f;
+}
+
+#contact label {
+	display:block;
+	width:100%;
+	margin-bottom:8px;
+}
+
+#contact ul li {
+	margin-bottom:10px;
+}
+
+#contact input[type="text"],
+#contact textarea,
+#contact input[type="submit"] {
+	font-family: 'AvenirNextCondensed';
+	font-size:18px;
+	line-height:26px;
+	color:#666;
+	border:0;
+	background:#fff;
+	width:274px;
+	height:26px;
+	padding:0 8px;
+}
+
+#contact textarea {
+	line-height:20px;
+	width:274px;
+	height:114px;
+	padding:8px;
+	resize:none;
+}
+
+#contact input[type="submit"] {
+	display:block;
+	line-height:36px;
+	color:#fff;
+	background:#084f8f;
+	width:auto;
+	height:36px;
+	padding:0 10px;
+	overflow:visible;
+}
+
+#contact .right {
+	background:url(../../images/contact.jpg) left center no-repeat;	
+	width:512px;
+	height:678px;
+}
