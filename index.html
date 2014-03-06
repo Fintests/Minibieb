@@ -25,7 +25,10 @@
 
 	<!-- Page d'accueil -->
 	<script id="home-tpl" type="text/x-handlebars-template">
-			<section id="home">
+			<section id="home" class="swiper-container">
+				<div class="swiper-wrapper">
+			        <div class="swiper-slide"> <img src="img/slider1-1.png"> </div>
+			      </div>
 				<span></span>
 	            <div class="bloc">
 	                <a href="#contexte" >
@@ -35,21 +38,21 @@
 	            </div>
 	        </section>
 
-	        <div class="device">
-			    <div class="swiper-container">
-			      <div class="swiper-wrapper">
-			        <div class="swiper-slide"> <img src="img/slider1-1.png"> </div>
-			        <div class="swiper-slide"> <img src="img/slider1-2.png"> </div>
-			        <div class="swiper-slide">
-			          <div class="content-slide">
-			            <p class="title">Slide with HTML</p>
-			            <p>You can put any HTML inside of slide with any layout, not only images, even another Swiper!</p>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			    <div class="pagination"></div>
-		  </div>
+	   //      <div class="device">
+			 //    <div class="swiper-container">
+			 //      <div class="swiper-wrapper">
+			 //        <div class="swiper-slide"> <img src="img/slider1-1.png"> </div>
+			 //        <div class="swiper-slide"> <img src="img/slider1-2.png"> </div>
+			 //        <div class="swiper-slide">
+			 //          <div class="content-slide">
+			 //            <p class="title">Slide with HTML</p>
+			 //            <p>You can put any HTML inside of slide with any layout, not only images, even another Swiper!</p>
+			 //          </div>
+			 //        </div>
+			 //      </div>
+			 //    </div>
+			 //    <div class="pagination"></div>
+		  // </div>
 	</script>
 
 	<!-- Page contexte -->
@@ -87,16 +90,26 @@
     pagination: '.pagination',
     loop:true,
     grabCursor: true,
-    paginationClickable: true
+    paginationClickable: true,
+    onSlideNext : function() {
+      //Do something when you touch the slide
+      alert('Slide vers la droite');
+      window.location.hash='#contexte';
+    },
+    onSlidePrev : function() {
+      //Do something when you touch the slide
+      alert('Slide vers la gauche');
+      window.location.hash='#';
+    }
   })
-  $('.arrow-left').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipePrev()
-  })
-  $('.arrow-right').on('click', function(e){
-    e.preventDefault()
-    mySwiper.swipeNext()
-  })
+  // $('.arrow-left').on('click', function(e){
+  //   e.preventDefault()
+  //   mySwiper.swipePrev()
+  // })
+  // $('.arrow-right').on('click', function(e){
+  //   e.preventDefault()
+  //   mySwiper.swipeNext()
+  // })
   </script>
 
 </body>
