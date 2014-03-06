@@ -21,57 +21,46 @@
 </script>
 </head>
 <body role="document">
-	
+	<div class="page">
 
 	<!-- Page d'accueil -->
 	<script id="home-tpl" type="text/x-handlebars-template">
-			<section id="home" class="swiper-container">
-				<div class="swiper-wrapper">
+			<div class="device">
+			    <div class="swiper-container">
+			      <div class="swiper-wrapper">
+			        <div class="swiper-slide"> 
+			        	<section id="home" class="swiper-container"><div class="bloc">page 1</div> </section>
+			        </div>
+			        <div class="swiper-slide"> 
+			        	<header role="banner" >
+					        <nav role="navigation">
+					            <ul>
+					                <li onclick="window.location.hash='#home'"><p><span>38, Opéra</span></p></li>
+					                <li onclick="window.location.hash='#contexte'" class="li-contexte"><p><span>Contexte locatif</span></p></li>
+					                <li onclick="window.location.hash='#localisation'" class="li-localisation"><p><span>Localisation &amp; Environnement</span></p></li>
+					                <li onclick="window.location.hash='#immeuble'" class="li-immeuble"><p><span>L&rsquo;immeuble</span></p></li>
+					                <li onclick="window.location.hash='#visite'" class="li-visite"><p><span>Visite</span></p></li>
+					                <li onclick="window.location.hash='#contact'" class="li-contact"><p><span>Contact</span></p></li>
+					                <li><span>Allianz</span></li>
+					            </ul>
+					        </nav>
+						</header>
+						<div>tete</div>
+			        </div>
+			        <div class="swiper-slide"> <section id="home" class="swiper-container"><div class="bloc">page 3</div> </section></div>
 			        <div class="swiper-slide">
-			        	<span></span>
-			            <div class="bloc">
-			                <a href="#contexte" >
-								<span>38, Opéra</span> 
-								<span>Présentation des plateaux</span>
-							</a>
-			            </div>
+			          <div class="content-slide">
+			            <p class="title">Slide with HTML</p>
+			            <p>You can put any HTML inside of slide with any layout, not only images, even another Swiper!</p>
+			          </div>
 			        </div>
 			      </div>
-	        </section>
-
-	   //      <div class="device">
-			 //    <div class="swiper-container">
-			 //      <div class="swiper-wrapper">
-			 //        <div class="swiper-slide"> <img src="img/slider1-1.png"> </div>
-			 //        <div class="swiper-slide"> <img src="img/slider1-2.png"> </div>
-			 //        <div class="swiper-slide">
-			 //          <div class="content-slide">
-			 //            <p class="title">Slide with HTML</p>
-			 //            <p>You can put any HTML inside of slide with any layout, not only images, even another Swiper!</p>
-			 //          </div>
-			 //        </div>
-			 //      </div>
-			 //    </div>
-			 //    <div class="pagination"></div>
-		  // </div>
+			    </div>
+			    <div class="pagination"></div>
+		  </div>
 	</script>
 
-	<!-- Page contexte -->
-	<script id="contexte-tpl" type="text/" >
-		<section id="contexte" class="pageContent scroll">
-	    	<div>
-	            <h1>Le contexte locatif</h1>
-	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-	        </div>
-	        
-	        <div>
-	            <h2>Stacking plan</h2>
-	            <p>Lip quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-	        </div>
-	    </section>
-	</script>
-
-
+</div>
 	
 
 <!-- <script src="phonegap.js"></script> -->
@@ -94,13 +83,9 @@
     paginationClickable: true,
     onSlideNext : function() {
       //Do something when you touch the slide
-      alert('Slide vers la droite');
-      window.location.hash='#contexte';
     },
     onSlidePrev : function() {
       //Do something when you touch the slide
-      alert('Slide vers la gauche');
-      window.location.hash='#';
     }
   })
   // $('.arrow-left').on('click', function(e){
