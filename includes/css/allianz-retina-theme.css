@@ -6,128 +6,139 @@
 	only screen and (-o-min-device-pixel-ratio: 3/2),
 	only screen and (min-device-pixel-ratio: 1.5) {
 
+
 /*---------------------------------
 HEADER
 -----------------------------------*/
 header[role="banner"] nav[role="navigation"] ul li:last-child { 
 	background:url(../../images/retina/allianz@2x.gif) left top no-repeat;
+	background-size:contain;
+	width:13%;
+	height:59px;
 }
+
 
 /*---------------------------------
 CONTENT
 -----------------------------------*/
 /* HOME */
 #home {
-	background:url(../../images/home@x2.jpg) left top no-repeat;
+	background:url(../../images/retina/home@2x.jpg) right top no-repeat;
+	background-size:cover;
 }
 
 #home > span {
-	background:url(../../images/allianz@x2.gif) left top no-repeat;
+	background:url(../../images/retina/allianz@2x.gif) left top no-repeat;
+	background-size:contain;
 }
 
 
-/* CONTEXTE */
-#contexte div {
-	background:url(../../images/immeuble-exterieur@x2.jpg) 447px 55px no-repeat;
+/* CONTEXTE + IMMEUBLE */
+#contexte div:nth-child(1) .right,
+#contexte div:nth-child(2) .left,
+#immeuble div:nth-child(1) .left,
+#immeuble div:nth-child(2) .right {
+	background-image:url(../../images/retina/immeuble@2x.jpg);
 }
 
-#contexte div + div {
-	background:#fff url(../../images/immeuble-exterieur@x2.jpg) 65px 40px no-repeat;
+#contexte div:nth-child(2) .left {
+	background-image:url(../../images/retina/immeuble-cour@2x.jpg);
+}
+
+#immeuble div:nth-child(1) .left {
+	background-image:url(../../images/retina/immeuble-exterieur-bis@2x.jpg);
+}
+
+#immeuble div:nth-child(2) .right {
+	background-image:url(../../images/retina/immeuble-exterieur-bis@2x.jpg);
 }
 
 
 /* LOCALISATION */
 #localisation .map {
-	background:url(../../images/googleMap@x2.gif) left top no-repeat;
+	background:url(../../images/retina/googleMap@2x.gif) center top no-repeat;
+	background-size:cover;
 }
 
 #localisation .mapInfo .button {
-	background:url(../../images/closeMap@x2.gif) left top no-repeat;
+	background-image:url(../../images/retina/closeMap@2x.gif);
 }
 
 #localisation .mapInfo .buttonClose {
-	background:url(../../images/openMap@x2.gif) left top no-repeat;
-	display:none;
+	background-image:url(../../images/retina/openMap@2x.gif);
 }
 
-#localisation .mapInfo ul:first-child li:nth-child(1) {
-	background:url(../../images/picto_parkings@x2.png) center top no-repeat;
+#localisation .mapInfo ul:first-child li:nth-child(1) span {
+	background-image:url(../../images/retina/picto_parkings@2x.png);
 }
 
-#localisation .mapInfo ul:first-child li:nth-child(2) {
-	background:url(../../images/picto_metros@x2.png) center top no-repeat;
+#localisation .mapInfo ul:first-child li:nth-child(2) span {
+	background-image:url(../../images/retina/picto_metros@2x.png);
 }
 
-#localisation .mapInfo ul:first-child li:nth-child(3) {
-	background:url(../../images/picto_velib@x2.png) center top no-repeat;
+#localisation .mapInfo ul:first-child li:nth-child(3) span {
+	background-image:url(../../images/retina/picto_velib@2x.png);
 }
 
-#localisation .mapInfo ul:first-child li:nth-child(4) {
-	background:url(../../images/picto_autolib@x2.png) center top no-repeat;
+#localisation .mapInfo ul:first-child li:nth-child(4) span {
+	background-image:url(../../images/retina/picto_autolib@2x.png);
 }
 
-#localisation .mapInfo ul:first-child li:nth-child(5) {
-	background:url(../../images/picto_gares@x2.png) center top no-repeat;
+#localisation .mapInfo ul:first-child li:nth-child(5) span {
+	background-image:url(../../images/retina/picto_gares@2x.png);
 }
 
-#localisation .mapInfo ul:first-child li:nth-child(6) {
-	background:url(../../images/picto_bus@x2.png) center top no-repeat;
+#localisation .mapInfo ul:first-child li:nth-child(6) span {
+	background-image:url(../../images/retina/picto_bus@2x.png);
 }
 
-#localisation .mapInfo ul:first-child li.off {
-	background:url(../../images/picto_cache@x2.png) center top no-repeat;
-}
-
-
-/* IMMEUBLE */
-#immeuble div {
-	background:url(../../images/immeuble-exterieur-bis@x2.jpg) 65px 55px no-repeat;
-}
-
-#immeuble div + div {
-	background:#fff url(../../images/immeuble-exterieur-bis@x2.jpg) 447px 40px no-repeat;
+#localisation .mapInfo ul:first-child li.off span {
+	background-image:url(../../images/retina/picto_cache@2x.png);
 }
 
 
 /* VISITE */
-#visite div {
-	background:url(../../images/immeuble-exterieur@x2.jpg) left top no-repeat;
+#visite article:nth-child(1) .left,
+#visite article:nth-child(2) .right {
+	background-image:url(../../images/retina/immeuble-exterieur@2x.jpg);
+	background-position:right top;
 }
 
-#visite div + div {
-	background:url(../../images/immeuble-interieur@x2.jpg) right top no-repeat;
+#visite article:nth-child(2) .right {
+	background-image:url(../../images/retina/immeuble-interieur@2x.jpg);
 }
 
 
 /* GALERIE */
 .galleryImg .close {
-	background:url(../../images/close@x2.gif) left top no-repeat;
+	background:url(../../images/retina/close@2x.gif) left top no-repeat;
+	background-size:cover;
 }
 
 #galleryExt {
-	background:url(../../images/home@x2.jpg) left top no-repeat;
+	background-image:url(../../images/retina/home@2x.jpg);
 }
 
 #galleryInt1 {
-	background:url(../../images/gallery1@x2.jpg) left top no-repeat;
+	background-image:url(../../images/retina/gallery1@2x.jpg);
 }
 
 #galleryInt1 .bloc span {
-	background:url(../../images/plan1@x2.jpg) left top no-repeat;
+	background-image:url(../../images/retina/plan1@2x.jpg);
 }
 
 #galleryInt2 {
-	background:url(../../images/gallery2@x2.jpg) left top no-repeat;
+	background-image:url(../../images/retina/gallery2@2x.jpg);
 }
 
 #galleryInt2 .bloc span {
-	background:url(../../images/plan2@x2.jpg) left top no-repeat;
+	background-image:url(../../images/retina/plan2@2x.jpg);
 }
-
 
 /* CONTACT */
 #contact .right {
-	background:url(../../images/contact@2x.jpg) left center no-repeat;	
+	background:url(../../images/retina/contact@2x.jpg) center top no-repeat;
+	background-size:cover;
 }
 
-
+}
