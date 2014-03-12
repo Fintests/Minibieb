@@ -9,29 +9,29 @@
 <link href="includes/css/allianz-theme.css" type="text/css" rel="stylesheet"/>
 <link href="includes/css/allianz-retina-theme.css" type="text/css" rel="stylesheet"/>
 
-<script type="text/javascript" src="includes/css/source-sans-pro.js"></script>
+<!-- <script type="text/javascript" src="includes/css/source-sans-pro.js"></script> -->
 
 <!-- google map -->
-<link href="includes/lib/jquery.mobile/jquery.mobile.structure-1.1.0.min.css" type="text/css" rel="stylesheet"/>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="includes/lib/jquery.mobile/jquery-1.7.1.min"></script>
+<!-- <link href="includes/lib/jquery.mobile/jquery.mobile.structure-1.1.0.min.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+<script type="text/javascript" src="includes/lib/jquery.mobile/jquery-1.7.1.min"></script> 
 
 <script type="text/javascript">
-	    $(document).bind("mobileinit", function(){
-        $.mobile.defaultDialogTransition = "none";
-        // $.mobile.defaultPageTransition = "none";
-        $.mobile.defaultPageTransition = "slide";
-    });
+	   //  $(document).bind("mobileinit", function(){
+    //     $.mobile.defaultDialogTransition = "none";
+    //     // $.mobile.defaultPageTransition = "none";
+    //     $.mobile.defaultPageTransition = "slide";
+    // });
 </script>
 
-<script type="text/javascript" src="includes/lib/jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+<!-- <script type="text/javascript" src="includes/lib/jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
 <script type="text/javascript" src="includes/lib/jquery.ui.map.beta/jquery.ui.map.js"></script>
 <script type="text/javascript" src="includes/lib/jquery.ui.map.beta/jquery.ui.map.extensions.js"></script>
-<script type="text/javascript" src="includes/lib/jquery.ui.map.beta/jquery.ui.map.services.js"></script>
+<script type="text/javascript" src="includes/lib/jquery.ui.map.beta/jquery.ui.map.services.js"></script> -->
 <!-- fin google map -->
 
 <!-- Biseau -->
-<script type="text/javascript" src="includes/lib/jquery.biseau.js"></script>
+<!-- <script type="text/javascript" src="includes/lib/jquery.biseau.js"></script> -->
 
 <!-- swipe -->
 <script src="includes/lib/idangerous.swiper.js"></script>
@@ -62,29 +62,97 @@
 			</header>
 			<div class="device">
 			    <div class="swiper-container">
-			      <div class="swiper-wrapper">
-			        <div class="swiper-slide"> 
-			        	<section id="home">
-							<span></span>
-							<div class="bloc">
-								<span>38, Opéra</span> 
-								<span>Présentation des plateaux</span>
-							</div>
-						</section>
-			        </div>
-			        <div class="swiper-slide"> 
-			        	<section id="home">
-							<span></span>
-							<div class="bloc">
-								<span>38, Opéra</span> 
-								<span>Présentation des plateaux 2</span>
-							</div>
-						</section>
-			        </div>
-			      </div>
+			      	<div class="swiper-wrapper">
+				        <div class="swiper-slide"> 
+				        	<section id="home">
+								<span></span>
+								<div class="bloc">
+									<span>38, Opéra</span> 
+									<span>Présentation des plateaux niveau 1</span>
+								</div>
+							</section>
+				        </div>
+				        <div class="swiper-slide">
+				        	<section id="home">
+								<span></span>
+								<div class="bloc" onclick="changeSlide(1)">
+									<span>38, Opéra</span> 
+									<span>Présentation des plateaux 2 niveau 1</span>
+								</div>
+							</section>
+				        </div>
+				        <div class="swiper-slide"> 
+				        	<section id="home">
+								<span></span>
+								<div class="bloc">
+									<span>38, Opéra</span> 
+									<span>Présentation des plateaux 3 niveau 1</span>
+								</div>
+							</section>
+				        </div>
+				        <div class="swiper-slide"> 
+				        	<section id="home">
+								<span></span>
+								<div class="bloc">
+									<span>38, Opéra</span> 
+									<span>Présentation des plateaux 1 niveau 2</span>
+								</div>
+							</section>
+				        </div>
+				        <div class="swiper-slide"> 
+				        	<section id="home">
+								<span></span>
+								<div class="bloc">
+									<span>38, Opéra</span> 
+									<span>Présentation des plateaux 2 niveau 2</span>
+								</div>
+							</section>
+				        </div>
+			    	</div>
+			    	<div class="pagination"></div>
 			    </div>
-			    <div class="pagination"></div>
-		  </div>
+		  	</div>
+		  	<div class="galleryExt" style="display:none;" >
+		  		<section id="galleryExt" class="galleryImg scroll">
+    
+			        <p class="close" onclick="changeSlide(2)"><span>Fermer</span></p>
+			        
+			    </section>
+			</div>
+			<div class="galleryInt1" style="display:none;" >
+		  		<section id="galleryInt1" class="galleryImg scroll">
+    
+			        <p class="close" onclick="changeSlide(2)"><span>Fermer</span></p>
+
+			        <div class="bloc">
+			            <span></span>
+			            <p>3ème étage</p>
+			            <p>Espace principal</p>
+						<ul>
+							<li onclick="window.location.hash='#galleryInt1'" class="active">Salle de réunion</li>
+							<li onclick="window.location.hash='#galleryInt2'">2 bureaux</li>
+						</ul>
+			        </div>
+			                
+			    </section>
+			</div>
+			<div class="galleryInt2" style="display:none;" >
+		  		<section id="galleryInt2" class="galleryImg scroll">
+    
+	        		<p class="close" onclick="changeSlide(2)"><span>Fermer</span></p>
+
+			        <div class="bloc">
+			            <span></span>
+			            <p>3ème étage</p>
+			            <p>Espace principal</p>
+						<ul>
+							<li onclick="window.location.hash='#galleryInt1'">Salle de réunion</li>
+							<li onclick="window.location.hash='#galleryInt2'" class="active">2 bureaux</li>
+						</ul>
+			        </div>
+			                
+			    </section>
+			</div>
 	</script>
 
 </div>
@@ -107,23 +175,59 @@
   var mySwiper = new Swiper('.swiper-container',{
     pagination: '.pagination',
     loop:true,
+    vitesse: 500,
     grabCursor: true,
     paginationClickable: true,
-    onSlideNext : function() {
-      //Do something when you touch the slide
-      	var index = $('.swiper-container').activeIndex;
-  		console.log('Content active'+index);
+    onSlideNext : function(index) {
+      	//Do something when you touch the slide
+		displayHeader(index.activeLoopIndex);
     },
-    onSlidePrev : function() {
-      //Do something when you touch the slide
-      	var index = $('.swiper-container').activeIndex;
-  		console.log('Content active'+index);
+    onSlidePrev : function(index) {
+      	//Do something when you touch the slide
+      	displayHeader(index.activeLoopIndex);
+    },
+    onSetWrapperTransition : function()
+    {
+    	/*détecte le clic pour anticiper sur le chargement des autres slides*/
+    	console.log('fonction magique');
     }
   });
+
+  $(document).ready(function(){
+  	changePage(0);
+  });
+
+  function displayHeader(index)
+  {
+  	console.log('boucle '+mySwiper.activeLoopIndex);
+  	if(index == 0)
+		$('header').hide();
+	else
+		$('header').show();
+  }
+
   function changePage (index)
   {
+  	// permet de changer de page
   	mySwiper.swipeTo(index,10);
-  	console.log(index);
+
+  	// Permet d'afficher ou non le header en fonction de la slide active
+	displayHeader(mySwiper.activeLoopIndex);
+  }
+
+
+  function changeSlide(num)
+  {
+  	if(num == 1)
+  	{
+	  	$('.device').hide();
+	  	$('.galleryExt').show();	
+  	}
+  	else
+  	{
+  		$('.galleryExt').hide();
+  		$('.device').show();
+  	}
   }
 
 
