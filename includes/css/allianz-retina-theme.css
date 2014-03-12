@@ -117,10 +117,12 @@ CONTENT
 
 #galleryExt {
 	background-image:url(../../images/retina/home@2x.jpg);
+	background-size:contain;
 }
 
 #galleryInt1 {
 	background-image:url(../../images/retina/gallery1@2x.jpg);
+	background-size:contain;
 }
 
 #galleryInt1 .bloc span {
@@ -129,6 +131,7 @@ CONTENT
 
 #galleryInt2 {
 	background-image:url(../../images/retina/gallery2@2x.jpg);
+	background-size:contain;
 }
 
 #galleryInt2 .bloc span {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "fr.wakemeup.phonegapSwipe"
+        versionCode = "10"
+        version     = "1.1.0">
+
+    <name>phonegapSwipe</name>
+
+    <description>
+        Test Swipe in phonegap
+    </description>
+
+    <author href="http://www.wakemeup.fr/" email="dev@wakemeup.fr">
+        WMUdev
+    </author>
+
+    <feature name="http://api.phonegap.com/1.0/notification" />
+    <feature name="http://api.phonegap.com/1.0/geolocation" />
+    <feature name="http://api.phonegap.com/1.0/network" />
+
+    <access origin="*" subdomains="true" />
+</widget>

@@ -10,6 +10,9 @@ var app = {
     registerEvents: function() {
         // Super important pour fluidité de l'application
         $(window).on('hashchange', $.proxy(this.route, this));
+        // $(window).on('load', $.proxy(this.route, this));
+
+
         $('body').on('mousedown', 'a', function(event) {
             $(event.target).addClass('tappable-active');
         });
@@ -27,7 +30,7 @@ var app = {
     },
 
     
-    slidePage: function(page) {
+    slidePage: function(page, callback) {
  
         var currentPageDest,
             self = this;
@@ -54,6 +57,11 @@ var app = {
         }
      
         $('body').html(page.el);
+
+        if(callback)
+        {
+            callback();
+        }
      
         // Wait until the new page has been added to the DOM...
         setTimeout(function() {
@@ -69,100 +77,29 @@ var app = {
         var self = this;
         var hash = window.location.hash;
 
+        this.homePage = new LocalisationView(locations).render();
 
-        // version avec slider
-        if (!hash) {
-            this.homePage = new HomeView().render();
-            this.slidePage(this.homePage);
-            // $('body').html( new HomeView().render().el);
-            $('.bloc').biseau({tl:0,tr:0,br:50,bl:0});
-            return;
-        }
-        else
-        {
-            if(hash=="#contexte")
-            {
-                this.homePage = new ContexteView().render();
-                this.slidePage(this.homePage);
-                // $('body').html( new ContexteView().render().el);
-                $('.li-contexte').addClass('active');
+        //  console.log($('#map_canvas'));
+        this.slidePage(this.homePage, function() {
+            if(google.maps) {
+                self.map = map.initialize('map_canvas', locations);
             }
-            else if(hash=="#localisation")
-            {
-                this.homePage = new LocalisationView().render();
-                this.slidePage(this.homePage);
-                // $('body').html( new LocalisationView().render().el);
+        });
 
-                $('.li-localisation').addClass('active');
+        $('.li-localisation').addClass('active');
 
-                $('.buttonOpen').click(function() {
-                    $(this).css('display','none');
-                    $('.buttonClose').css({'display':'block','top':'142px'});
-                    $('.mapInfo').css({'right':'0','top':'0'});
-                });
-                
-                $('.buttonClose').click(function() {
-                    $(this).css('display','none');
-                    $('.buttonOpen').css({'display':'block','top':'102px'});
-                    $('.mapInfo').css({'right':'-277px','top':'40px'});
-                });
-            }
-            else if(hash=="#immeuble")
-            {
-                this.homePage = new ImmeubleView().render();
-                this.slidePage(this.homePage);
-                // $('body').html(new ImmeubleView().render().el);
-                $('.li-immeuble').addClass('active');
-            }
-            else if(hash=="#visite")
-            {
-                this.homePage = new VisiteView().render();
-                this.slidePage(this.homePage);
-                // $('body').html(new VisiteView().render().el);
-                $('.li-visite').addClass('active');
-            }
-            else if(hash=="#galleryExt")
-            {
-                this.homePage = new GalleryExtView().render();
-                this.slidePage(this.homePage);
-                // $('body').html(new GalleryExtView().render().el);
-                $('.li-visite').addClass('active');
-            }
-            else if(hash=="#galleryInt1")
-            {
-                this.homePage = new GalleryInt1View().render();
-                this.slidePage(this.homePage);
-                // $('body').html(new GalleryInt1View().render().el);
-                $('.li-visite').addClass('active');
-                $('.bloc').biseau({tl:0,tr:0,br:40,bl:0});
-            }
-            else if(hash=="#galleryInt2")
-            {
-                this.homePage = new GalleryInt2View().render();
-                this.slidePage(this.homePage);
-                // $('body').html(new GalleryInt2View().render().el);
-                $('.li-visite').addClass('active');
-                $('.bloc').biseau({tl:0,tr:0,br:40,bl:0});
-            }
-            else if(hash=="#contact")
-            {
-                this.homePage = new ContactView().render();
-                this.slidePage(this.homePage);
-                // $('body').html(new ContactView().render().el);
-                $('.li-contact').addClass('active');
-            }
-            // else if(hash=="#allianz")
-            // {
-            //     navigator.app.loadUrl('https://m.allianz.fr/accueil/index.html', { openExternal:true } ); 
-            // }
-            else
-            {
-                this.homePage = new HomeView().render();
-                this.slidePage(this.homePage);
-                // $('body').html(new HomeView().render().el);
-                $('.bloc').biseau({tl:0,tr:0,br:40,bl:0});
-            }
-        }
+        $('.buttonOpen').click(function() {
+            $(this).css('display','none');
+            $('.buttonClose').css({'display':'block','top':'175px'});
+            $('.mapInfo').css({'right':'0','top':'33px'});
+        });
+        
+        $('.buttonClose').click(function() {
+            $(this).css('display','none');
+            $('.buttonOpen').css({'display':'block','top':'148px'});
+            $('.mapInfo').css({'right':'-277px','top':'60px'});
+        });
+
     },
 };
 
