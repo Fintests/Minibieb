@@ -11,7 +11,8 @@
 HEADER
 -----------------------------------*/
 header[role="banner"] nav[role="navigation"] ul li:last-child { 
-	background:url(../../images/retina/allianz@2x.gif) left top no-repeat;
+	/*background:url(../../images/retina/allianz@2x.gif) left top no-repeat;*/
+	background:url(../../images/retina/poenpoen@2x.png) left top no-repeat;
 	background-size:contain;
 	width:13%;
 	height:59px;
