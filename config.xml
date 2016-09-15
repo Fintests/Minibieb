@@ -53,10 +53,10 @@
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" /> -->
-    <icon src="images/logo/icon-57.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="images/logo/icon-72.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="images/logo/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="images/logo/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+    <icon src="images/logo/icon-57x.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="images/logo/icon-72x.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="images/logo/icon-57x-2x.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="images/logo/icon-72x-2x.png"         gap:platform="ios"        width="144" height="144" />
     
 
     <!-- Define app splash screen for each platform. -->
